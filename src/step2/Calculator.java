@@ -29,18 +29,11 @@ public class Calculator {
                 break;
 
             case '/':
-                if (num2 == 0) {
-                    try {
-                        throw new RuntimeException();
-                        } catch (RuntimeException e) {
-                            System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-                            System.out.println();
-                        }
-                } else {
-                    result = num1 / num2;
-                    System.out.println("계산 결과: " + result);
-                    break;
-                }
+                result = num1 / num2;
+                System.out.println("계산 결과: " + result);
+                break;
+
+
         } list.add(result);
         return result;
     }

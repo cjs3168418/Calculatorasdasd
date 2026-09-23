@@ -34,8 +34,13 @@ public class App {
             if (sign == '+') {}
             else if (sign == '-') {}
             else if (sign == '*') {}
-            else if (sign == '/') {}
-            else {
+            else if (sign == '/') {
+                if (b == 0) {
+                    System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                    System.out.println();
+                    continue;
+                }
+            } else {
                 System.out.println("사칙연산 기호(+,-,*,/)중에 입력하세요!");
                 System.out.println();
                 continue;
@@ -52,7 +57,6 @@ public class App {
                 calculator.remove();
                 System.out.println("Getter 메서드 활용: " + calculator.getList());
             }
-
 
             System.out.print("계산기를 종료하실려면 'exit'를 입력하세요: ");
             String command = scanner.nextLine();
